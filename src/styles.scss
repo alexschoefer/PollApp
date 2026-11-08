@@ -1,1 +1,13 @@
-@import 'styles/main.scss';
+// Import all the SCSS files from the abstracts folder
+@use './styles/abstracts/colors';
+@use './styles/abstracts/mixins';
+
+// Import all the SCSS files from the base folder
+@use './styles/base/global';
+@use './styles/base/typography';
+
+// Import all the SCSS files from the components folder
+@use './styles/components/buttons';
+
+// Import all the SCSS files from the layout folder
+@use './styles/layout/main';

@@ -6,4 +6,16 @@ import { Component } from '@angular/core';
   styleUrl: './landing-page.scss',
   templateUrl: './landing-page.html',
 })
-export class LandingPage {}
+export class LandingPage {
+
+  /**
+   * Sets the theme of the landing page to 'landing-page' when the component is initialized.
+   */
+  ngOnInit() {
+    document.body.setAttribute('data-theme', 'landing-page');
+  }
+
+
+
+
+}

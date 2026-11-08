@@ -1,0 +1,110 @@
+/* Typography Variables and Font Faces */
+
+// Font families
+$font-families: (
+    heading: 'Nerko One',
+    button: 'Nokora',
+    text: 'Mulish'
+);
+
+// Font weights
+$font-weights: (
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    extrabold: 800
+);
+
+// Font sizes
+$font-sizes: (
+    h1: clamp(2.5rem, 6vw + 1rem, 6.25rem),
+    h2: clamp(2rem, 5vw + 0.5rem, 4.5rem),
+    text-large: clamp(1.5rem, 2vw + 0.5rem, 2rem),
+    text-medium: clamp(1.25rem, 1vw + 0.5rem, 1.5rem),
+    text-regular: 1rem,
+    text-small: 0.875rem,
+    button: 1.125rem
+);
+
+/* Generate CSS variables for font families, weights, and sizes */
+:root {
+    @each $key, $value in $font-families {
+        --font-family-#{$key}: #{$value};
+    }
+
+    @each $key, $value in $font-weights {
+        --font-weight-#{$key}: #{$value};
+    }
+
+    @each $key, $value in $font-sizes {
+        --font-size-#{$key}: #{$value};
+    }
+}
+
+/* Nerko One — H1 */
+@font-face {
+    font-display: swap;
+    font-family: 'Nerko One';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/NerkoOne-Regular.ttf') format('woff2');
+}
+
+/* Nokora — Buttons */
+@font-face {
+    font-display: swap;
+    font-family: 'Nokora';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/nokora-v34-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Nokora';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/nokora-v34-latin-regular.woff2') format('woff2');
+}
+
+/* Mulish — Text */
+@font-face {
+    font-display: swap;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/mulish-v18-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/mulish-v18-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/fonts/mulish-v18-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/mulish-v18-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 800;
+    src: url('/fonts/mulish-v18-latin-800.woff2') format('woff2');
+}

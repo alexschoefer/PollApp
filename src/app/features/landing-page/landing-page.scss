@@ -1,0 +1,40 @@
+@use '../../../styles/abstracts/mixins';
+
+.landing-page-header {
+    img {
+        width: 80px;
+        height: 50px;
+    }
+}
+
+.landing-page__main {
+    margin-top: 40px;
+    color: #FFFFFF;
+
+    h1 {
+        font-family: var(--font-family-heading);
+        font-size: var(--font-size-h1);
+        color: var(--color-orange-primary);
+    }
+}
+
+.landing-page__hero {
+
+    @include mixins.flex-space-btw;
+
+    p {
+        font-family: var(--font-family-text);
+        font-weight: var(--font-weight-semibold);
+        font-size: var(--font-size-text-large);
+    }
+
+    &-container-left {
+        @include mixins.flex-column-space-btw;
+        gap: 40px;
+        max-width: 720px;
+
+        >* {
+            width: fit-content;
+        }
+    }
+}
