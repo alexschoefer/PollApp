@@ -48,7 +48,7 @@ $font-sizes: (
     font-family: 'Nerko One';
     font-style: normal;
     font-weight: 400;
-    src: url('/public/assets/fonts/NerkoOne-Regular.ttf') format('woff2');
+    src: url('/fonts/NerkoOne-Regular.ttf') format('woff2');
 }
 
 /* Nokora — Buttons */
@@ -57,7 +57,7 @@ $font-sizes: (
     font-family: 'Nokora';
     font-style: normal;
     font-weight: 400;
-    src: url('/public/assets/fonts/nokora-v34-latin-regular.woff2') format('woff2');
+    src: url('/fonts/nokora-v34-latin-regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -65,7 +65,7 @@ $font-sizes: (
     font-family: 'Nokora';
     font-style: normal;
     font-weight: 700;
-    src: url('/public/assets/fonts/nokora-v34-latin-regular.woff2') format('woff2');
+    src: url('/fonts/nokora-v34-latin-regular.woff2') format('woff2');
 }
 
 /* Mulish — Text */
@@ -74,7 +74,7 @@ $font-sizes: (
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 400;
-    src: url('/public/assets/fonts/mulish-v18-latin-regular.woff2') format('woff2');
+    src: url('/fonts/mulish-v18-latin-regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -82,7 +82,7 @@ $font-sizes: (
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 500;
-    src: url('/public/assets/fonts/mulish-v18-latin-500.woff2') format('woff2');
+    src: url('/fonts/mulish-v18-latin-500.woff2') format('woff2');
 }
 
 @font-face {
@@ -90,7 +90,7 @@ $font-sizes: (
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 600;
-    src: url('/public/assets/fonts/mulish-v18-latin-600.woff2') format('woff2');
+    src: url('/fonts/mulish-v18-latin-600.woff2') format('woff2');
 }
 
 @font-face {
@@ -98,7 +98,7 @@ $font-sizes: (
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 700;
-    src: url('/public/assets/fonts/mulish-v18-latin-700.woff2') format('woff2');
+    src: url('/fonts/mulish-v18-latin-700.woff2') format('woff2');
 }
 
 @font-face {
@@ -106,5 +106,5 @@ $font-sizes: (
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 800;
-    src: url('/public/assets/fonts/mulish-v18-latin-800.woff2') format('woff2');
+    src: url('/fonts/mulish-v18-latin-800.woff2') format('woff2');
 }

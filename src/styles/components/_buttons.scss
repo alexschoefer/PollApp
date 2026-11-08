@@ -1,0 +1,25 @@
+
+@use '../abstracts/mixins';
+
+/* Styles for standard buttons */
+.btn {
+    font-family: var(--font-family-button);
+    font-size: var(--font-size-button);
+    font-weight: var(--font-weight-bold);
+    border-radius: 10px;
+    padding: 12px 16px 12px 16px;
+    border: none;
+    cursor: pointer;
+    @include mixins.flex-center;
+    gap: 0.5rem;
+}
+
+/* Styles for primary buttons */
+.btn--primary {
+    background-color: var(--color-orange-secondary);
+    color: var(--color-purple-dark);
+
+    &:hover {
+        background-color: var(--color-orange-primary);
+    }
+}
