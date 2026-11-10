@@ -1,0 +1,121 @@
+
+.landing-page__hero-visual {
+    position: relative;
+    width: clamp(280px, 40vw, 500px);
+    height: clamp(224px, 32vw, 400px);
+
+    &-image {
+        width: 100%;
+        z-index: 2;
+        position: relative;
+        display: block;
+    }
+
+    &-icon {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        z-index: 3;
+        transform-origin: center;
+        pointer-events: none;
+        transition: transform 0.5s ease;
+
+        &--bubble {
+            top: 25%;
+            left: 25%;
+            animation: bubble-float 2s ease-in-out infinite;
+        }
+
+        &--check {
+            bottom: -15%;
+            right: 10%;
+            animation: check-float 2s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+
+        &--star {
+            bottom: -20%;
+            left: 15%;
+            animation: star-float 3s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+
+        &--question {
+            top: 5%;
+            right: 10%;
+            animation: question-float 2s ease-in-out infinite;
+            animation-delay: 0.7s;
+        }
+    }
+
+    /* Hover effect */
+    &:hover {
+        .landing-page__hero-visual-icon {
+            animation-play-state: paused;
+            z-index: 1;
+        }
+
+        .landing-page__hero-visual-icon--bubble {
+            transform: translate(45px, 35px) scale(0.75) rotate(12deg);
+        }
+
+        .landing-page__hero-visual-icon--question {
+            transform: translate(-45px, 35px) scale(0.75) rotate(-12deg);
+        }
+
+        .landing-page__hero-visual-icon--star {
+            transform: translate(35px, -35px) scale(0.75) rotate(15deg);
+        }
+
+        .landing-page__hero-visual-icon--check {
+            transform: translate(-35px, -35px) scale(0.75) rotate(-15deg);
+        }
+    }
+}
+
+/* Floating animations */
+
+@keyframes bubble-float {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+    50% {
+        transform: translateY(-12px) rotate(5deg);
+    }
+}
+
+@keyframes question-float {
+    0%, 100% {
+        transform: translateY(0) rotate(5deg);
+    }
+    50% {
+        transform: translateY(10px) rotate(-7deg);
+    }
+}
+
+@keyframes star-float {
+    0%, 100% {
+        transform: translateY(0) rotate(-8deg) scale(1);
+    }
+    50% {
+        transform: translateY(-15px) rotate(12deg) scale(1.08);
+    }
+}
+
+@keyframes check-float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+    50% {
+        transform: translateY(12px) rotate(8deg) scale(1.05);
+    }
+}
+
+/* Accessibility: respect reduced motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .landing-page__hero-visual-icon {
+        animation: none;
+        transition: none;
+    }
+}
