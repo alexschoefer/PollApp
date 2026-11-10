@@ -23,3 +23,24 @@
         background-color: var(--color-orange-primary);
     }
 }
+
+ /* Styles add a new survey with icon add */
+.btn--icon-add {
+    position: relative;
+    overflow: hidden;
+  
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 20px;
+      margin-left: 0.5rem;
+      background: url('/assets/images/icons/btn_icon_add_circle.svg') no-repeat center;
+      background-size: contain;
+      transition: width 0.2s ease;
+    }
+  
+    &:hover::after {
+      width: 20px;
+    }
+  }
