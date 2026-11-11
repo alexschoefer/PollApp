@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { SurveyList } from '../surveys/survey-list/survey-list';
 
 @Component({
-  imports: [],
+  imports: [SurveyList],
   selector: 'app-landing-page',
   styleUrl: './landing-page.scss',
   templateUrl: './landing-page.html',

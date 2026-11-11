@@ -5,10 +5,13 @@
 // Import all the SCSS files from the base folder
 @use './styles/base/global';
 @use './styles/base/typography';
+@use './styles/base/spacing_global';
 
 // Import all the SCSS files from the components folder
 @use './styles/components/buttons';
 @use './styles/components/hero_image';
+@use './styles/components/cards';
 
 // Import all the SCSS files from the layout folder
 @use './styles/layout/main';
+@use './styles/layout/spacing';
