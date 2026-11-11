@@ -16,6 +16,20 @@
         font-size: var(--font-size-h1);
         color: var(--color-orange-primary);
     }
+
+    h2 {
+        font-family: var(--font-family-heading);
+        font-size: var(--font-size-h2);
+        font-weight: var(--font-weight-regular);
+        color: var(--color-orange-primary);
+        text-align: center;
+    }
+
+    h3 {
+        font-family: var(--font-family-text);
+        font-size: var(--font-size-text-medium);
+        font-weight: var(--font-weight-medium);
+    }
 }
 
 .landing-page__hero {
@@ -37,4 +51,10 @@
             width: fit-content;
         }
     }
+}
+
+.landing-page__surveys-ending {
+    @include mixins.flex-column-space-btw;
+    gap: 40px;
+    margin-top: 80px;
 }

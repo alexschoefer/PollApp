@@ -1,0 +1,13 @@
+@use '../../../../styles/abstracts/mixins';
+
+h3 {
+    font-family: var(--font-family-text);
+    font-size: var(--font-size-text-large);
+    font-weight: var(--font-weight-bold);
+}
+
+.landing-page__surveys-ending-cards {
+    @include mixins.flex-space-btw;
+    gap: 16px;
+    flex-wrap: nowrap;
+}
