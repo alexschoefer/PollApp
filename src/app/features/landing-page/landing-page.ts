@@ -8,6 +8,8 @@ import { SurveyList } from '../surveys/survey-list/survey-list';
   templateUrl: './landing-page.html',
 })
 export class LandingPage {
+  
+  activeFilter: 'active' | 'past' = 'active';
 
   /**
    * Sets the theme of the landing page to 'landing-page' when the component is initialized.
