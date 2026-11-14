@@ -38,5 +38,35 @@
             <app-survey-list></app-survey-list>
         </section>
 
+        <!-- ACTIVE / PAST SURVEYS COLLECTION -->
+        <section class="landing-page__surveys-collection content-spacing-container section-spacing">
+            <div class="landing-page__surveys-collection-filter">
+                <div class="landing-page__surveys-collection-filter-left">
+                    <button 
+                        class="btn-filter"
+                        [class.btn-filter-active] = "activeFilter === 'active'"
+                        [class.btn-filter-inactive] = "activeFilter !== 'active'"
+                        (click)="activeFilter = 'active'">
+                        Active surveys
+                    </button>
+                    <button 
+                        class="btn-filter"
+                        class="btn-filter"
+                        [class.btn-filter-active] = "activeFilter === 'past'"
+                        [class.btn-filter-inactive] = "activeFilter !== 'past'"
+                        (click)="activeFilter = 'past'">
+                        Past surveys
+                    </button>
+                </div>
+                <div class="landing-page__surveys-collection-filter-right">
+                <!-- Drop Down -->
+                 <app-drop-down
+                    label = "Sort by categories"
+                    [(value)]="selectedCategory"
+                 > 
+                 </app-drop-down>
+                </div>
+            </div>
+        </section>
     </main>
 </div>
