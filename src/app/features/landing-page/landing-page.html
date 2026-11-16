@@ -11,9 +11,16 @@
                     Create and share surveys in minutes – from team events to workplace culture. Collect opinions,
                     engage your audience, and turn feedback into action.
                 </p>
-                <button class="btn btn--primary btn--icon-add">
+                <button class="btn btn--primary btn--icon-add"
+                    (click)="isCreateSurveyOpen = true">
                     New survey
                 </button>
+                <!-- CREATE NEW SURVEY SECTION -->
+                <app-dialog [(open)]="isCreateSurveyOpen">
+                    <app-survey-create-page
+                        (close)="isCreateSurveyOpen = false"
+                    />
+                </app-dialog>
             </div>
             <div class="landing-page__hero-container-right">
                 <div class="landing-page__hero-visual">
