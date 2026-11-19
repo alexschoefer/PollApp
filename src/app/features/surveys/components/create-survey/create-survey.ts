@@ -9,4 +9,7 @@ import { SURVEY_CATEGORIES } from '../../../../shared/constants/survey-categorie
   styleUrl: './create-survey.scss',
   templateUrl: './create-survey.html',
 })
-export class CreateSurvey {}
+export class CreateSurvey {
+  today = new Date();
+  categories = SURVEY_CATEGORIES;
+}

@@ -1,0 +1,50 @@
+@use '../../../../../styles/abstracts/mixins';
+
+.create-survey__container {
+    @include mixins.flex-space-btw;
+}
+
+.create-survey__left-column {
+    @include mixins.flex-column-space-btw;
+    gap: 20px;
+}
+
+.create-survey__right-column {
+
+    align-self: flex-start;
+}
+
+.create-survey__label {
+    margin-bottom: 8px;
+    font-family: var(--font-family-text);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-text-medium);
+}
+
+.create-survey__input-field {
+    @include mixins.flex-space-btw;
+    justify-content: unset;
+    gap: 8px;
+}
+
+.create-survey__input-field-container{
+    @include mixins.flex-column-space-btw;
+}
+
+.create-survey__input-field-container-row {
+    @include mixins.flex-space-btw;
+}
+
+/*
+ * Error message styling
+ */
+.error-message {
+    color: red;
+    font-size: var(--font-size-text-small);
+    width: 200px;
+    visibility: hidden;
+}
+
+.error-message--visible {
+    visibility: visible;
+}
