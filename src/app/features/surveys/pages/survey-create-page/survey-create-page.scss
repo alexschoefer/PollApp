@@ -1,0 +1,27 @@
+@use '../../../../../styles/abstracts/mixins';
+
+.create-survey__main {
+    background-color: var(--color-purple-dark);
+    color: var(--color-bg-card-dropdown);
+    padding: 20px 40px;
+    border-radius: 0 60px 0 0;
+    margin: 20px 0;
+}
+
+.create-survey__survey_status_badge {
+    width: 60px;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-purple-dark);
+}
+
+.create-survey__header {
+    margin: 30px 0;
+    @include mixins.flex-space-btw;
+
+    h1 {
+        font-family: var(--font-family-heading);
+        font-size: var(--font-size-h2);
+        color: var(--color-orange-primary);
+    }
+}
+
