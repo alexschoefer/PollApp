@@ -1,18 +1,25 @@
-<div>
+<div class="container">
     <!-- Header only visible in mobile version -->
     <header>
         <img src="assets/images/logos/logo_dark.png" alt="">
     </header>
     <!-- Main Create Survey -->
-     <main>
+    <main class="create-survey__main">
         <section>
-            <p>Draft</p>
-            <header>
-                <h1>Create new survey</h1>
-                <button>
+            <p class="create-survey__survey_status_badge badge">Draft</p>
+            <header class="create-survey__header">
+                <h1 class="create-survey__title">Create new survey</h1>
+                <button class="btn btn-cancel">
                     Cancel
+                    <svg class="icon icon--close" width="20" height="20" viewBox="0 0 24 24">
+                        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
                 </button>
             </header>
+            <!-- Survey Form -->
+            <form action="">
+                <app-create-survey></app-create-survey>
+            </form>
         </section>
-     </main>
+    </main>
 </div>

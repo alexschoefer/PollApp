@@ -44,6 +44,7 @@
     }
 }
 
+/* Styles for filter buttons */
 .btn-filter {
     background-color: var(--color-orange-tertiary);
     color: var(--color-purple-dark);
@@ -71,6 +72,7 @@
     }
 }
 
+/* Styles for dropdown buttons */
 .btn-dropDown {
     gap: 18px;
     @include mixins.flex-center;
@@ -104,5 +106,23 @@
         opacity: 1;
         transform: scaleY(1);
         pointer-events: auto;
+    }
+}
+
+.btn-cancel {
+    font-family: var(--font-family-button);
+    font-size: var(--font-size-button);
+    color: white;
+    @include mixins.flex-center;
+    gap: 8px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    background-color: var(--color-orange-quaternary);
+    color: white;
+
+    &:hover {
+        background-color: var(--color-orange-quaternary-hover);
     }
 }

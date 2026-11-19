@@ -1,1 +1,38 @@
-<p>create-survey works!</p>
+<article class="create-survey__container">
+    <!-- LEFT -->
+    <div class="create-survey__left-column">
+        <!-- Input Survey name -->
+        <!-- create-survey-field -->
+        <div class="create-survey__input-field-container">
+            <label class="create-survey__label">Survey name</label>
+            <!-- input-row -->
+            <div class="create-survey__input-field">
+                <input type="text" class="survey__input--standard-width survey__input-field">
+            </div>
+            <p class="error-message">Ups! This field cannot be empty!</p>
+        </div>
+
+        <div class="create-survey__input-field-container-row ">
+            <div class="create-survey__input-field-container">
+                <label class="create-survey__label">Set end date (optional)</label>
+                <div class="create-survey__input-field">
+                    <input type="date" [min]="today" class="survey__input--small-width survey__input-field">
+                </div>
+            </div>
+            <div>
+                <p class="error-message">Please choose one category!</p>
+                <app-drop-down label="Choose category"></app-drop-down>
+            </div>
+        </div>
+    </div>
+    <!-- RIGHT -->
+    <div class="create-survey__right-column">
+        <div class="create-survey__input-field-container">
+            <label class="create-survey__label">Describing text (optional)</label>
+            <div class="create-survey__input-field">
+                <textarea class="survey__input--standard-width survey__input-field-textarea">
+                        </textarea>
+            </div>
+        </div>
+    </div>
+</article>

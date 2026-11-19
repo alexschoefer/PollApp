@@ -45,4 +45,40 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-  }
+}
+
+@mixin input-focus {
+    &:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+        background-color: var(--color-orange-tertiary);
+    }
+}
+
+@mixin thin-scrollbar {
+    scrollbar-color: var(--color-orange-primary) transparent;
+    overflow: overlay;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 8px;
+        appearance: none;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--color-orange-primary);
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-button {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+}
