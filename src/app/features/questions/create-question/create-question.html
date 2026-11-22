@@ -1,20 +1,20 @@
 <!-- Section Question -->
-<section>
+<section class="create-question__header">
     <div class="create-question__input-field-container">
-        <label class="create-question__label">Question</label>
-        <input type="text" class="survey__input--standard-width survey__input-field">
+        <label class="create-question__label">{{ questionNumberIndex()! + 1 }}. Question</label>
         <app-delete-button></app-delete-button>
     </div>
-    <p class="error-message">This field cannot be empty!</p>
+    <input type="text" class="survey__input--standard-width survey__input-field">
+    <p class="error-message" [class.error-message--visible]="isVisible">This field cannot be empty!</p>
 </section>
 <!-- Section Answer -->
-<section>
-    <div>
+<section class="create-answers__header">
+    <div class="create-question__label_allow_multiple_answers">
         <label class="create-question__label">Answers</label>
-        <label class="create-question__label">
-            <input type="checkbox" class="survey__input--standard-width survey__input-field">
+        <label class="create-survey__checkbox">
+            <input type="checkbox" class="survey__input--standard-width">
             Allow multiple answers.
         </label>
-
     </div>
 </section>
+
