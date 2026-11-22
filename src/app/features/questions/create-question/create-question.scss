@@ -1,0 +1,78 @@
+@use '../../../../styles/abstracts/mixins';
+
+.create-question__input-field {
+    @include mixins.flex-space-btw;
+    justify-content: unset;
+    gap: 8px;
+}
+
+.create-question__input-field-container {
+    @include mixins.flex-space-btw;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 12px;
+}
+
+.create-question__label {
+    margin-bottom: 8px;
+    font-family: var(--font-family-text);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-text-medium);
+
+    &_allow_multiple_answers {
+        @include mixins.flex-space-btw;
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 8px;
+    }
+}
+
+.create-question__header {
+    margin-bottom: 16px;
+    margin-top: 20px;
+}
+
+.create-survey__checkbox {
+    @include mixins.flex-space-btw;
+    gap: 8px;
+    font-size: var(--font-size-text-small);
+    cursor: pointer;
+    font-family: var(--font-text);
+    color: white;
+
+    input {
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 2px solid white;
+        border-radius: 4px;
+        background: transparent;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--color-orange-quaternary-hover);
+        }
+
+        &:checked {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: var(--color-orange-primary);
+            background-image: url('/assets/images/icons/check_icon.svg');
+            background-size: 10px;
+        }
+    }
+}
+
+/*
+ * Error message styling
+ */
+ .error-message {
+    color: red;
+    font-size: var(--font-size-text-small);
+    width: 200px;
+    visibility: hidden;
+}
+
+.error-message--visible {
+    visibility: visible;
+}
