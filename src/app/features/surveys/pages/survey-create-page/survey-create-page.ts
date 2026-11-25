@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { CreateSurvey } from '../../components/create-survey/create-survey';
 import { CreateQuestion } from '../../../questions/create-question/create-question';
 
@@ -8,4 +8,14 @@ import { CreateQuestion } from '../../../questions/create-question/create-questi
   styleUrl: './survey-create-page.scss',
   templateUrl: './survey-create-page.html',
 })
-export class SurveyCreatePage {}
+export class SurveyCreatePage {
+
+  close = output<void>();
+
+  /**
+   * Close the overlay for creating a survey
+   */
+  closeCreateSurveyOverlay() {
+    this.close.emit();
+  }
+}
