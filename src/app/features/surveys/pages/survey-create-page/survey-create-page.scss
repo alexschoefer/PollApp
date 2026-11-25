@@ -25,3 +25,28 @@
     }
 }
 
+.create-survey__form_body {
+    justify-content: unset;
+    gap: 30px;
+    background-color: var(--color-purple-light);
+    border-radius: 0 70px 0 0;
+    padding: 20px 40px;
+    @include mixins.flex-column-space-btw;
+    font-family: var(--font-family-text);
+
+    label {
+        margin-bottom: 6px;
+    }
+}
+
+.create-survey__questions {
+    @include mixins.grid-two-columns;
+}
+
+.create-survey__add-question-btn {
+    grid-column: 2;
+    justify-self: start;
+    align-self: start;
+    width: fit-content;
+    height: auto;
+  }
